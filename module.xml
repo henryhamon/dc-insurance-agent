@@ -2,14 +2,17 @@
 <Export generator="Cache" version="25">
   <Document name="dc-sample.ZPM">
     <Module>
-      <Name>dc-sample</Name>
-      <Version>2.0.10</Version>
-      <Description>Basic InterSystems IRIS Development Template</Description>
+      <Name>dc-insurance-crew-sample</Name>
+      <Version>0.0.1</Version>
+      <Description>example about AI agents powered by Crewai in InterSystems Iris</Description>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
       <Resource Name="dc.sample.PKG"/>
       <UnitTest Name="/tests" Package="dc.sample.unittests" Phase="test"/>
-
+      <Invokes>
+          <Invoke Class="dc.sample.data.Setup" Method="Init">
+          </Invoke>
+      </Invokes>
     </Module>
   </Document>
 </Export>
