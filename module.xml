@@ -3,7 +3,7 @@
   <Document name="dc-sample.ZPM">
     <Module>
       <Name>dc-insurance-crew-sample</Name>
-      <Version>0.0.2</Version>
+      <Version>0.0.3</Version>
       <Description>example about AI agents powered by Crewai in InterSystems Iris</Description>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
