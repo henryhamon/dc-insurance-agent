@@ -27,6 +27,13 @@ Relationship Exclusions As Exclusion(%JSONFIELDNAME = "exclusions") [ Cardinalit
 
 Relationship Limits As Limit(%JSONFIELDNAME = "coverage_limits") [ Cardinality = many, Inverse = Policy ];
 
+Query FindBySSN(SSN As %String) As %SQLQuery [ SqlProc ]
+{
+    SELECT id as PolicyID
+    FROM dc_sample_data.Policy
+    WHERE Customer->SSN = :SSN
+}
+
 Storage Default
 {
 <Data name="PolicyDefaultData">
